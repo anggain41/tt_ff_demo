@@ -1,5 +1,8 @@
 TtFfDemo::Application.routes.draw do
-  get "home/index"
+
+  root to: "home#index"
+
+  match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
